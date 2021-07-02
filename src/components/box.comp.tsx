@@ -19,7 +19,7 @@ export function Box(props: JSX.IntrinsicElements['mesh'] & BoxProps) {
 
   const part = props.part
 
-  const geometry = part
+  const geometry: [ width: number, height: number, depth: number ]= part
     ? [ part.width, part.height, part.depth ]
     : [ 1, 1, 1 ]
 
@@ -32,7 +32,7 @@ export function Box(props: JSX.IntrinsicElements['mesh'] & BoxProps) {
       onClick={(event: any) => setActive(!active)}
       onPointerOver={(event: any) => setHover(true)}
       onPointerOut={(event: any) => setHover(false)}>
-      <boxGeometry args={geometry as any} />
+      <boxGeometry args={geometry} />
       <meshStandardMaterial
         side={props.invert ? THREE.BackSide : THREE.FrontSide}
         // color={hovered ? 'hotpink' : 'orange'}
