@@ -1,16 +1,9 @@
 
-import * as THREE from 'three'
+import React from 'react'
 import ReactDOM from 'react-dom'
-import React, { useRef, useState } from 'react'
-import { Canvas, useFrame } from '@react-three/fiber'
 import { MainComp } from './components/main.comp'
-import { AppStore } from './store/app-store'
 import { CA } from './store/actions'
-
-
-
-
-
+import { AppStore } from './store/app-store'
 
 
 ReactDOM.render(
@@ -23,4 +16,3 @@ ReactDOM.render(
 window.addEventListener("resize", (evt) => {
   CA.GlobalUi.updateCanvas(window.innerWidth, window.innerHeight)
 })
-

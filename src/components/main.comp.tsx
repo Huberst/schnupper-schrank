@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { TAppStore } from "../store/app-store"
 import { AppCtx } from "../store/context"
 import { CanvasWrapper } from "./canvas-wrapper.comp"
+import { Controls } from "./controls.comp"
 
 
 export const MainComp = (props: { store: TAppStore, register: boolean }) => {
@@ -16,11 +17,11 @@ export const MainComp = (props: { store: TAppStore, register: boolean }) => {
     setMounted(true)
   }
 
-
   const Provider = AppCtx.Provider
 
   return (
     <Provider value={state}>
+      <Controls />
       <CanvasWrapper />
     </Provider>
   )

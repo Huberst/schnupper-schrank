@@ -4,7 +4,6 @@ export type TStoreState = { id: string }
 
 export const DUMMY_STORE = "DUMMY_STORE"
 
-type Function = () => void
 
 /**
  * Basic impl. of an observable store.
